@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Item" representedClassName=".Item" syncable="YES">
+        <attribute name="completedOne" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="completedThree" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="completedTwo" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="creationDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endMood" optional="YES" attributeType="Integer 64" maxValueString="32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastModifiedDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="nameOne" attributeType="String" minValueString="3" maxValueString="128"/>
+        <attribute name="nameThree" attributeType="String" minValueString="3" maxValueString="128"/>
+        <attribute name="nameTwo" attributeType="String" minValueString="3" maxValueString="128"/>
+        <attribute name="startMood" optional="YES" attributeType="Integer 64" maxValueString="32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="179"/>
+    </elements>
+</model>

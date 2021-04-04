@@ -8,39 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		C16B328A2618D6D80094E10F /* Top_Tree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C16B32742618D6D70094E10F /* Top_Tree.xcdatamodeld */; };
-		C16B328B2618D6D80094E10F /* Top_Tree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C16B32742618D6D70094E10F /* Top_Tree.xcdatamodeld */; };
-		C16B328C2618D6D80094E10F /* Top_TreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32762618D6D70094E10F /* Top_TreeApp.swift */; };
-		C16B328D2618D6D80094E10F /* Top_TreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32762618D6D70094E10F /* Top_TreeApp.swift */; };
 		C16B328E2618D6D80094E10F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32772618D6D70094E10F /* ContentView.swift */; };
-		C16B328F2618D6D80094E10F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32772618D6D70094E10F /* ContentView.swift */; };
-		C16B32902618D6D80094E10F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32782618D6D70094E10F /* Persistence.swift */; };
-		C16B32912618D6D80094E10F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32782618D6D70094E10F /* Persistence.swift */; };
 		C16B32922618D6D80094E10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16B32792618D6D80094E10F /* Assets.xcassets */; };
-		C16B32932618D6D80094E10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16B32792618D6D80094E10F /* Assets.xcassets */; };
+		C16B32A32618E4480094E10F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32A22618E4480094E10F /* Stack.swift */; };
+		C16B32A92618E50D0094E10F /* FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32A72618E50D0094E10F /* FetchRequests.swift */; };
+		C16B32AA2618E50D0094E10F /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32A82618E50D0094E10F /* Saving.swift */; };
+		C16B32AF2618E7DD0094E10F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32AD2618E7DD0094E10F /* Item.swift */; };
+		C16B32B42618ED270094E10F /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32B32618ED270094E10F /* Testing.swift */; };
+		C16B32BF2618EDB70094E10F /* PersistentHistoryTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32BA2618EDB70094E10F /* PersistentHistoryTracking.swift */; };
+		C16B32C02618EDB70094E10F /* PersistentHistoryFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32BB2618EDB70094E10F /* PersistentHistoryFetcher.swift */; };
+		C16B32C12618EDB70094E10F /* PersistentHistoryObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32BC2618EDB70094E10F /* PersistentHistoryObserver.swift */; };
+		C16B32C22618EDB70094E10F /* PersistentHistoryCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32BD2618EDB70094E10F /* PersistentHistoryCleaner.swift */; };
+		C16B32C32618EDB70094E10F /* PersistentHistoryMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32BE2618EDB70094E10F /* PersistentHistoryMerger.swift */; };
+		C16B32CD2618EF2A0094E10F /* Insertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32CC2618EF2A0094E10F /* Insertions.swift */; };
+		C16B32E42618F3F50094E10F /* FetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32E32618F3F50094E10F /* FetchedResultsController.swift */; };
+		C16B32F62619E87E0094E10F /* Top_TreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32F52619E87E0094E10F /* Top_TreeApp.swift */; };
+		C16B33002619EF1C0094E10F /* InsightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32FF2619EF1C0094E10F /* InsightView.swift */; };
+		C16B33052619F3B00094E10F /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B33042619F3B00094E10F /* ItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C16B32752618D6D70094E10F /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
-		C16B32762618D6D70094E10F /* Top_TreeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top_TreeApp.swift; sourceTree = "<group>"; };
 		C16B32772618D6D70094E10F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C16B32782618D6D70094E10F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		C16B32792618D6D80094E10F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C16B327E2618D6D80094E10F /* Top Tree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Tree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C16B32812618D6D80094E10F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C16B32862618D6D80094E10F /* Top Tree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Tree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C16B32882618D6D80094E10F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C16B32892618D6D80094E10F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C16B329E2618E0410094E10F /* Top Tree.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Top Tree.entitlements"; sourceTree = "<group>"; };
+		C16B32A22618E4480094E10F /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		C16B32A72618E50D0094E10F /* FetchRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchRequests.swift; sourceTree = "<group>"; };
+		C16B32A82618E50D0094E10F /* Saving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
+		C16B32AD2618E7DD0094E10F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		C16B32B32618ED270094E10F /* Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		C16B32BA2618EDB70094E10F /* PersistentHistoryTracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHistoryTracking.swift; sourceTree = "<group>"; };
+		C16B32BB2618EDB70094E10F /* PersistentHistoryFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHistoryFetcher.swift; sourceTree = "<group>"; };
+		C16B32BC2618EDB70094E10F /* PersistentHistoryObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHistoryObserver.swift; sourceTree = "<group>"; };
+		C16B32BD2618EDB70094E10F /* PersistentHistoryCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHistoryCleaner.swift; sourceTree = "<group>"; };
+		C16B32BE2618EDB70094E10F /* PersistentHistoryMerger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHistoryMerger.swift; sourceTree = "<group>"; };
+		C16B32CC2618EF2A0094E10F /* Insertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insertions.swift; sourceTree = "<group>"; };
+		C16B32E32618F3F50094E10F /* FetchedResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsController.swift; sourceTree = "<group>"; };
+		C16B32F52619E87E0094E10F /* Top_TreeApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Top_TreeApp.swift; sourceTree = "<group>"; };
+		C16B32FF2619EF1C0094E10F /* InsightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightView.swift; sourceTree = "<group>"; };
+		C16B33042619F3B00094E10F /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C16B327B2618D6D80094E10F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C16B32832618D6D80094E10F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +67,8 @@
 		C16B326E2618D6D70094E10F = {
 			isa = PBXGroup;
 			children = (
+				C16B329E2618E0410094E10F /* Top Tree.entitlements */,
+				C16B32D22618F2510094E10F /* Application */,
 				C16B32732618D6D70094E10F /* Shared */,
 				C16B32802618D6D80094E10F /* iOS */,
 				C16B32872618D6D80094E10F /* macOS */,
@@ -63,11 +79,10 @@
 		C16B32732618D6D70094E10F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				C16B32762618D6D70094E10F /* Top_TreeApp.swift */,
-				C16B32772618D6D70094E10F /* ContentView.swift */,
-				C16B32782618D6D70094E10F /* Persistence.swift */,
+				C16B33032619F39A0094E10F /* ViewModel */,
+				C16B32FD2619EEF70094E10F /* Views */,
+				C16B32A52618E4520094E10F /* Model */,
 				C16B32792618D6D80094E10F /* Assets.xcassets */,
-				C16B32742618D6D70094E10F /* Top_Tree.xcdatamodeld */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -76,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				C16B327E2618D6D80094E10F /* Top Tree.app */,
-				C16B32862618D6D80094E10F /* Top Tree.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +110,60 @@
 				C16B32892618D6D80094E10F /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		C16B32A52618E4520094E10F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C16B32742618D6D70094E10F /* Top_Tree.xcdatamodeld */,
+				C16B32AD2618E7DD0094E10F /* Item.swift */,
+				C16B32B92618EDAC0094E10F /* Persistent History  */,
+				C16B32A22618E4480094E10F /* Stack.swift */,
+				C16B32E32618F3F50094E10F /* FetchedResultsController.swift */,
+				C16B32CC2618EF2A0094E10F /* Insertions.swift */,
+				C16B32B32618ED270094E10F /* Testing.swift */,
+				C16B32A72618E50D0094E10F /* FetchRequests.swift */,
+				C16B32A82618E50D0094E10F /* Saving.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C16B32B92618EDAC0094E10F /* Persistent History  */ = {
+			isa = PBXGroup;
+			children = (
+				C16B32BD2618EDB70094E10F /* PersistentHistoryCleaner.swift */,
+				C16B32BB2618EDB70094E10F /* PersistentHistoryFetcher.swift */,
+				C16B32BE2618EDB70094E10F /* PersistentHistoryMerger.swift */,
+				C16B32BC2618EDB70094E10F /* PersistentHistoryObserver.swift */,
+				C16B32BA2618EDB70094E10F /* PersistentHistoryTracking.swift */,
+			);
+			path = "Persistent History ";
+			sourceTree = "<group>";
+		};
+		C16B32D22618F2510094E10F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C16B32F52619E87E0094E10F /* Top_TreeApp.swift */,
+			);
+			name = Application;
+			path = Shared/Model/Application;
+			sourceTree = "<group>";
+		};
+		C16B32FD2619EEF70094E10F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C16B32772618D6D70094E10F /* ContentView.swift */,
+				C16B32FF2619EF1C0094E10F /* InsightView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C16B33032619F39A0094E10F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C16B33042619F3B00094E10F /* ItemViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,23 +186,6 @@
 			productReference = C16B327E2618D6D80094E10F /* Top Tree.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C16B32852618D6D80094E10F /* Top Tree (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C16B32992618D6D80094E10F /* Build configuration list for PBXNativeTarget "Top Tree (macOS)" */;
-			buildPhases = (
-				C16B32822618D6D80094E10F /* Sources */,
-				C16B32832618D6D80094E10F /* Frameworks */,
-				C16B32842618D6D80094E10F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Top Tree (macOS)";
-			productName = "Top Tree (macOS)";
-			productReference = C16B32862618D6D80094E10F /* Top Tree.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -145,9 +196,6 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					C16B327D2618D6D80094E10F = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					C16B32852618D6D80094E10F = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -166,7 +214,6 @@
 			projectRoot = "";
 			targets = (
 				C16B327D2618D6D80094E10F /* Top Tree (iOS) */,
-				C16B32852618D6D80094E10F /* Top Tree (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -180,14 +227,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C16B32842618D6D80094E10F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C16B32932618D6D80094E10F /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -196,20 +235,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C16B328A2618D6D80094E10F /* Top_Tree.xcdatamodeld in Sources */,
-				C16B32902618D6D80094E10F /* Persistence.swift in Sources */,
-				C16B328C2618D6D80094E10F /* Top_TreeApp.swift in Sources */,
+				C16B32E42618F3F50094E10F /* FetchedResultsController.swift in Sources */,
+				C16B33052619F3B00094E10F /* ItemViewModel.swift in Sources */,
+				C16B33002619EF1C0094E10F /* InsightView.swift in Sources */,
+				C16B32A32618E4480094E10F /* Stack.swift in Sources */,
+				C16B32C22618EDB70094E10F /* PersistentHistoryCleaner.swift in Sources */,
+				C16B32AF2618E7DD0094E10F /* Item.swift in Sources */,
+				C16B32C32618EDB70094E10F /* PersistentHistoryMerger.swift in Sources */,
+				C16B32CD2618EF2A0094E10F /* Insertions.swift in Sources */,
+				C16B32AA2618E50D0094E10F /* Saving.swift in Sources */,
 				C16B328E2618D6D80094E10F /* ContentView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C16B32822618D6D80094E10F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C16B328B2618D6D80094E10F /* Top_Tree.xcdatamodeld in Sources */,
-				C16B32912618D6D80094E10F /* Persistence.swift in Sources */,
-				C16B328D2618D6D80094E10F /* Top_TreeApp.swift in Sources */,
-				C16B328F2618D6D80094E10F /* ContentView.swift in Sources */,
+				C16B32BF2618EDB70094E10F /* PersistentHistoryTracking.swift in Sources */,
+				C16B32C12618EDB70094E10F /* PersistentHistoryObserver.swift in Sources */,
+				C16B32B42618ED270094E10F /* Testing.swift in Sources */,
+				C16B32A92618E50D0094E10F /* FetchRequests.swift in Sources */,
+				C16B32C02618EDB70094E10F /* PersistentHistoryFetcher.swift in Sources */,
+				C16B32F62619E87E0094E10F /* Top_TreeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,11 +373,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Top Tree.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ4P2MCN2J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jackelms.personal.Top-Tree";
 				PRODUCT_NAME = "Top Tree";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,11 +397,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Top Tree.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ4P2MCN2J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,57 +410,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jackelms.personal.Top-Tree";
 				PRODUCT_NAME = "Top Tree";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C16B329A2618D6D80094E10F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VZ4P2MCN2J;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jackelms.personal.Top-Tree";
-				PRODUCT_NAME = "Top Tree";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		C16B329B2618D6D80094E10F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VZ4P2MCN2J;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jackelms.personal.Top-Tree";
-				PRODUCT_NAME = "Top Tree";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -437,15 +434,6 @@
 			buildConfigurations = (
 				C16B32972618D6D80094E10F /* Debug */,
 				C16B32982618D6D80094E10F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C16B32992618D6D80094E10F /* Build configuration list for PBXNativeTarget "Top Tree (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C16B329A2618D6D80094E10F /* Debug */,
-				C16B329B2618D6D80094E10F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
