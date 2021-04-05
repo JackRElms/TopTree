@@ -11,10 +11,22 @@ import SwiftUI
 struct Top_TreeApp: App {
     let persistenceController = PersistentContainer.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    private func determineScreenLayout() -> CGFloat {
+        var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
+        if idiom != .mac {
+            return 0
+        } else {
+            return 1000
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.viewContext)
+                .frame(minWidth: determineScreenLayout(), maxWidth: .infinity, minHeight: determineScreenLayout(), maxHeight: .infinity)
+
         }
     }
 }

@@ -18,16 +18,16 @@ extension Item {
                 (0..<numberOfSamples).forEach { index in
                     let item = Item(context: taskContext)
         
-                    item.nameOne = String(format: "Generated %05d", index)
-                    item.nameTwo = String(format: "Generated %05d", index)
-                    item.nameThree = String(format: "Generated %05d", index)
+                    item.nameOne = "Walk the Dog"
+                    item.nameTwo = "Clean the Kitchen"
+                    item.nameThree = "Make the Bed"
                     item.completedOne = true
                     item.completedTwo = true
                     item.completedThree = false
                     item.startMood = Mood.happy
                     item.endMood = Mood.happy
-                    item.lastModifiedDate = creationDate
-                    item.creationDate = creationDate
+                    item.lastModifiedDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate) ?? creationDate
+                    item.creationDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate)
                 }
 
                 try taskContext.save()
@@ -35,6 +35,24 @@ extension Item {
                 print("### \(#function): One by one inserted \(numberOfSamples) posts")
             } catch {
                 print("### \(#function): Failed to insert articles in batch: \(error)")
+            }
+        }
+    }
+    
+    static func deleteAllOneByOne() throws {
+        let taskContext = PersistentContainer.shared.newBackgroundContext()
+        taskContext.perform {
+            do {
+                let fetchRequest = self.fetchRequest()
+                let objects = try taskContext.fetch(fetchRequest) as! [NSManagedObject]
+                objects.forEach { object in
+                    taskContext.delete(object)
+                }
+                try taskContext.save()
+                taskContext.reset()
+                print("### \(#function): One by one deleted post count: \(objects.count)")
+            } catch {
+                print("### \(#function): Failed to delete existing records one by one: \(error)")
             }
         }
     }

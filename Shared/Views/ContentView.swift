@@ -10,18 +10,22 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: Item.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Item.startMood, ascending: false)]) var items: FetchedResults<Item>
+    @FetchRequest(entity: Item.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Item.creationDate, ascending: false)]) var items: FetchedResults<Item>
 
     var body: some View {
         NavigationView {
             List(items, id: \.self) { item in
-                NavigationLink(destination: InsightView(item: item)) { Text(item.nameOne) }
+                NavigationLink(destination: InsightView(item: item)) { Text(item.creationDate, style: .date) }
             }
             .navigationBarTitle("Top Tree")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
-                    Button("First") {
-                        try! Item.insertSamplesOneByOne(1000)
+                    Button("Insert") {
+                        try! Item.insertSamplesOneByOne(5)
+                    }
+                    Spacer()
+                    Button("Delete") {
+                        try! Item.deleteAllOneByOne()
                     }
                 }
             }

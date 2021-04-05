@@ -24,7 +24,9 @@
 		C16B32E42618F3F50094E10F /* FetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32E32618F3F50094E10F /* FetchedResultsController.swift */; };
 		C16B32F62619E87E0094E10F /* Top_TreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32F52619E87E0094E10F /* Top_TreeApp.swift */; };
 		C16B33002619EF1C0094E10F /* InsightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32FF2619EF1C0094E10F /* InsightView.swift */; };
-		C16B33052619F3B00094E10F /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B33042619F3B00094E10F /* ItemViewModel.swift */; };
+		C16B3312261A6D6F0094E10F /* TodayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B3311261A6D6F0094E10F /* TodayCardView.swift */; };
+		C16B3317261A6F060094E10F /* TotalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B3316261A6F060094E10F /* TotalCardView.swift */; };
+		C16B331A261B42620094E10F /* MostProductiveCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B3319261B42620094E10F /* MostProductiveCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +52,9 @@
 		C16B32E32618F3F50094E10F /* FetchedResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsController.swift; sourceTree = "<group>"; };
 		C16B32F52619E87E0094E10F /* Top_TreeApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Top_TreeApp.swift; sourceTree = "<group>"; };
 		C16B32FF2619EF1C0094E10F /* InsightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightView.swift; sourceTree = "<group>"; };
-		C16B33042619F3B00094E10F /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		C16B3311261A6D6F0094E10F /* TodayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCardView.swift; sourceTree = "<group>"; };
+		C16B3316261A6F060094E10F /* TotalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCardView.swift; sourceTree = "<group>"; };
+		C16B3319261B42620094E10F /* MostProductiveCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostProductiveCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +83,6 @@
 		C16B32732618D6D70094E10F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				C16B33032619F39A0094E10F /* ViewModel */,
 				C16B32FD2619EEF70094E10F /* Views */,
 				C16B32A52618E4520094E10F /* Model */,
 				C16B32792618D6D80094E10F /* Assets.xcassets */,
@@ -154,16 +157,19 @@
 			children = (
 				C16B32772618D6D70094E10F /* ContentView.swift */,
 				C16B32FF2619EF1C0094E10F /* InsightView.swift */,
+				C16B3314261A6EB90094E10F /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C16B33032619F39A0094E10F /* ViewModel */ = {
+		C16B3314261A6EB90094E10F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C16B33042619F3B00094E10F /* ItemViewModel.swift */,
+				C16B3311261A6D6F0094E10F /* TodayCardView.swift */,
+				C16B3316261A6F060094E10F /* TotalCardView.swift */,
+				C16B3319261B42620094E10F /* MostProductiveCardView.swift */,
 			);
-			path = ViewModel;
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +242,6 @@
 			files = (
 				C16B328A2618D6D80094E10F /* Top_Tree.xcdatamodeld in Sources */,
 				C16B32E42618F3F50094E10F /* FetchedResultsController.swift in Sources */,
-				C16B33052619F3B00094E10F /* ItemViewModel.swift in Sources */,
 				C16B33002619EF1C0094E10F /* InsightView.swift in Sources */,
 				C16B32A32618E4480094E10F /* Stack.swift in Sources */,
 				C16B32C22618EDB70094E10F /* PersistentHistoryCleaner.swift in Sources */,
@@ -244,6 +249,7 @@
 				C16B32C32618EDB70094E10F /* PersistentHistoryMerger.swift in Sources */,
 				C16B32CD2618EF2A0094E10F /* Insertions.swift in Sources */,
 				C16B32AA2618E50D0094E10F /* Saving.swift in Sources */,
+				C16B3312261A6D6F0094E10F /* TodayCardView.swift in Sources */,
 				C16B328E2618D6D80094E10F /* ContentView.swift in Sources */,
 				C16B32BF2618EDB70094E10F /* PersistentHistoryTracking.swift in Sources */,
 				C16B32C12618EDB70094E10F /* PersistentHistoryObserver.swift in Sources */,
@@ -251,6 +257,8 @@
 				C16B32A92618E50D0094E10F /* FetchRequests.swift in Sources */,
 				C16B32C02618EDB70094E10F /* PersistentHistoryFetcher.swift in Sources */,
 				C16B32F62619E87E0094E10F /* Top_TreeApp.swift in Sources */,
+				C16B3317261A6F060094E10F /* TotalCardView.swift in Sources */,
+				C16B331A261B42620094E10F /* MostProductiveCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
