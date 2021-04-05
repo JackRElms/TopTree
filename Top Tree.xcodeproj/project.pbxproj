@@ -27,6 +27,7 @@
 		C16B3312261A6D6F0094E10F /* TodayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B3311261A6D6F0094E10F /* TodayCardView.swift */; };
 		C16B3317261A6F060094E10F /* TotalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B3316261A6F060094E10F /* TotalCardView.swift */; };
 		C16B331A261B42620094E10F /* MostProductiveCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B3319261B42620094E10F /* MostProductiveCardView.swift */; };
+		C16B331D261B61470094E10F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B331C261B61470094E10F /* TodayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		C16B3311261A6D6F0094E10F /* TodayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCardView.swift; sourceTree = "<group>"; };
 		C16B3316261A6F060094E10F /* TotalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCardView.swift; sourceTree = "<group>"; };
 		C16B3319261B42620094E10F /* MostProductiveCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostProductiveCardView.swift; sourceTree = "<group>"; };
+		C16B331C261B61470094E10F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				C16B32772618D6D70094E10F /* ContentView.swift */,
 				C16B32FF2619EF1C0094E10F /* InsightView.swift */,
+				C16B331C261B61470094E10F /* TodayView.swift */,
 				C16B3314261A6EB90094E10F /* Components */,
 			);
 			path = Views;
@@ -258,6 +261,7 @@
 				C16B32C02618EDB70094E10F /* PersistentHistoryFetcher.swift in Sources */,
 				C16B32F62619E87E0094E10F /* Top_TreeApp.swift in Sources */,
 				C16B3317261A6F060094E10F /* TotalCardView.swift in Sources */,
+				C16B331D261B61470094E10F /* TodayView.swift in Sources */,
 				C16B331A261B42620094E10F /* MostProductiveCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Top Tree.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ4P2MCN2J;
 				ENABLE_PREVIEWS = YES;
@@ -406,6 +411,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Top Tree.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ4P2MCN2J;
 				ENABLE_PREVIEWS = YES;
