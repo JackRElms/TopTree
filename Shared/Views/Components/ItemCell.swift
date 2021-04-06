@@ -10,10 +10,16 @@ import SwiftUI
 struct ItemCell: View {
     
     @Binding var showingSheet: Bool
+    @Binding var task: String
+    
+    init(showingSheet: Binding<Bool>, task: Binding<String>) {
+        self._showingSheet = showingSheet
+        self._task = task
+    }
     
     var body: some View {
         HStack(alignment: .center, spacing: nil, content: {
-            Text("Empty")
+            Text(task)
                 .font(.title2)
                 .bold()
                 .foregroundColor(Color(UIColor.secondaryLabel))
@@ -39,12 +45,3 @@ struct ItemCell: View {
     }
 }
 
-struct ItemCell_Previews: PreviewProvider {
-    
-    @State static var showingSheet = false
-    
-    static var previews: some View {
-        ItemCell(showingSheet: $showingSheet)
-            .previewDevice("iPhone 11 Pro")
-    }
-}

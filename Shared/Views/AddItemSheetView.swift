@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddItemSheetView: View {
     
-    @Binding var item: Item
+    @EnvironmentObject var item: ItemInstance
     
     var body: some View {
         NavigationView {
@@ -17,12 +17,5 @@ struct AddItemSheetView: View {
                 .navigationBarTitle(Text("Notifications"), displayMode: .inline)
         }
         
-    }
-}
-
-struct AddItemSheetView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        AddItemSheetView(item: <#Binding<Item>#>)
     }
 }
