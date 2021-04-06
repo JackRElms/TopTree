@@ -24,13 +24,6 @@ struct ContentView: View {
                     .navigationBarTitle("Top Tree")
                     .navigationBarItems(trailing:
                         Button(action: {
-                            print("User icon pressed...")
-                        }) {
-                            Image(systemName: "person.crop.circle").imageScale(.large)
-                        }
-                    )
-                    .navigationBarItems(trailing:
-                        Button(action: {
                             showActionSheet = true
                         }) {
                             Image(systemName: "ellipsis.circle.fill").imageScale(.large)
@@ -43,7 +36,7 @@ struct ContentView: View {
                     )
                     
                 }.tabItem { Text("Top Tree") }.tag(1)
-                Text("Tab Content 2").tabItem { Text("Insights") }.tag(2)
+                TodayView().tabItem { Text("Insights") }.tag(2)
             }
         }
     }

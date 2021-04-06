@@ -8,13 +8,35 @@
 import SwiftUI
 
 struct TodayView: View {
+
+    @State var showingSheet = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView(.vertical) {
+                VStack(alignment: .leading, spacing: nil, content: {
+                    ItemCell(showingSheet: $showingSheet)
+                    ItemCell(showingSheet: $showingSheet)
+                    ItemCell(showingSheet: $showingSheet)
+                })
+            }
+            .navigationBarTitle("Today")
+        }.sheet(isPresented: $showingSheet, content: {
+            AddItemSheetView()
+        })
     }
 }
+
+
+class ShowingSheet: ObservableObject {
+
+    @Published var showingSheet: Bool = false
+}
+
 
 struct TodayView_Previews: PreviewProvider {
     static var previews: some View {
         TodayView()
+            .previewDevice("iPhone 11 Pro")
     }
 }
