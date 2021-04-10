@@ -10,30 +10,30 @@ import SwiftUI
 struct TodayView: View {
 
     @State var showingSheet = false
-    @StateObject var item = ItemInstance()
+    @State var selectedItem = ""
+    @FetchRequest(fetchRequest: Task.fetchTodaysTasks()) var tasks: FetchedResults<Task>
+
     
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
                 VStack(alignment: .leading, spacing: nil, content: {
-                    ItemCell(showingSheet: $showingSheet, task: $item.nameOne)
-                    ItemCell(showingSheet: $showingSheet, task: $item.nameTwo)
-                    ItemCell(showingSheet: $showingSheet, task: $item.nameThree)
-                })
+                    ForEach(tasks, id: \.self) { task in
+                        ItemCell(task: task, showingSheet: $showingSheet, selectedItem: $selectedItem)
+                    }
+                    
+                }).padding(.top, 20)
             }
             .navigationBarTitle("Today")
         }.sheet(isPresented: $showingSheet, content: {
-            AddItemSheetView()
-                .environmentObject(item)
+            switch selectedItem {
+            case "nameOne":
+                AddTaskSheetView(tasks: FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "task.id = %@", selectedItem)), showingSheet: $showingSheet, selectedItem: $selectedItem)
+            default:
+                AddTaskSheetView(tasks: FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "task.id = %@", selectedItem)), showingSheet: $showingSheet, selectedItem: $selectedItem)
+            }
         })
     }
-}
-
-
-class ItemInstance: ObservableObject {
-    @Published var nameOne = ""
-    @Published var nameTwo = ""
-    @Published var nameThree = ""
 }
 
 

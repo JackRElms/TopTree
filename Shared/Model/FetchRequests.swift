@@ -8,24 +8,42 @@
 import Foundation
 import CoreData
 
-extension Item {
-    @objc static func listAllFetchRequest() -> NSFetchRequest<Item> {
-        let fetchRequest = Item.fetchRequest
+extension Task {
+    @objc static func listAllFetchRequest() -> NSFetchRequest<Task> {
+        let fetchRequest = Task.fetchRequest
 
         // ORDER BY t0.ZNAME
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(Item.creationDate), ascending: false)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(Task.creationDate), ascending: false)]
 
         // LIMIT 20
         fetchRequest.fetchBatchSize = 20
 
         // 'SELECT 1, t0.Z_PK, t0.ZNAME, t0.ZCATEGORYNAME FROM ZARTICLE t0 WHERE  t0.Z_PK IN (SELECT * FROM _Z_intarray0)   LIMIT 20'
         fetchRequest.propertiesToFetch = [
-            #keyPath(Item.nameOne),
-            #keyPath(Item.completedOne),
-            #keyPath(Item.creationDate),
+            #keyPath(Task.name),
+            #keyPath(Task.completed),
+            #keyPath(Task.creationDate),
         ]
         
         return fetchRequest
+    }
+    
+    static func fetchTodaysTasks() -> NSFetchRequest<Task> {
+        let request: NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
+        
+        request.sortDescriptors = [NSSortDescriptor(key: "taskOrder", ascending: true)]
+          
+        return request
+    }
+    
+    static func fetchTask(id: UUID) -> NSFetchRequest<Task> {
+        let request: NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
+        
+        request.sortDescriptors = [NSSortDescriptor(key: "taskOrder", ascending: true)]
+        request.fetchLimit = 1
+        request.predicate = NSPredicate(format: "id == %@", id as UUID as CVarArg)
+          
+        return request
     }
 }
 

@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-extension Item {
+extension Task {
     static func insertSamplesOneByOne(_ numberOfSamples: Int) throws {
         let taskContext = PersistentContainer.shared.newBackgroundContext()
         taskContext.perform {
@@ -16,23 +16,42 @@ extension Item {
                 let creationDate = Date()
 
                 (0..<numberOfSamples).forEach { index in
-                    let item = Item(context: taskContext)
+                    let task = Task(context: taskContext)
         
-                    item.nameOne = "Walk the Dog"
-                    item.nameTwo = "Clean the Kitchen"
-                    item.nameThree = "Make the Bed"
-                    item.completedOne = true
-                    item.completedTwo = true
-                    item.completedThree = false
-                    item.startMood = Mood.happy
-                    item.endMood = Mood.happy
-                    item.lastModifiedDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate) ?? creationDate
-                    item.creationDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate)
+                    task.name = "Walk the Dog"
+                    task.completed = true
+                    task.lastModifiedDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate) ?? creationDate
+                    task.creationDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate)
+                    task.taskOrder = Int64(index)
+                    task.id = UUID()
+                    print(task)
                 }
 
                 try taskContext.save()
                 taskContext.reset()
                 print("### \(#function): One by one inserted \(numberOfSamples) posts")
+            } catch {
+                print("### \(#function): Failed to insert articles in batch: \(error)")
+            }
+        }
+    }
+    
+    static func createTask(_ taskName: String, taskOrder: Int) throws {
+        let taskContext = PersistentContainer.shared.newBackgroundContext()
+        taskContext.perform {
+            do {
+                let creationDate = Date()
+                let task = Task(context: taskContext)
+                task.name = "taskName"
+                task.completed = true
+                task.id = UUID()
+                task.lastModifiedDate = creationDate
+                task.creationDate = creationDate
+                task.taskOrder = Int64(1)
+                let creation2Date = Date()
+                try taskContext.save()
+                taskContext.reset()
+                print("### \(#function): Created task - \(task.name)")
             } catch {
                 print("### \(#function): Failed to insert articles in batch: \(error)")
             }

@@ -11,7 +11,7 @@ struct InsightView: View {
     @State var iosGridLayout = [ GridItem(.flexible()) ]
     @State var ipadosGridLayout = [ GridItem(.flexible()), GridItem(.flexible()) ]
 
-    var item: Item
+    var task: Task
     
     private func determineGridLayout() -> Array<GridItem> {
         var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
@@ -25,9 +25,9 @@ struct InsightView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: determineGridLayout()) {
-                TodayCardView(item: item)
-                TotalCardView(item: item)
-                MostProductiveCardView(item: item)
+                TodayCardView(task: task)
+                TotalCardView(task: task)
+                MostProductiveCardView(task: task)
             }
             .padding(.all, 10)
             .animation(.interactiveSpring())

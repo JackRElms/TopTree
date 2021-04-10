@@ -11,7 +11,7 @@ import SwiftUI
 
 struct MostProductiveCardView: View {
     
-    var item: Item
+    var task: Task
     
     var body: some View {
         ZStack(alignment: .topLeading, content: {
@@ -37,17 +37,7 @@ struct MostProductiveCardView: View {
                         HStack {
                             Image(systemName: "checkmark.circle.fill")
                                 .foregroundColor(.green)
-                            Text(item.nameOne)
-                        }
-                        HStack {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.green)
-                            Text(item.nameTwo)
-                        }
-                        HStack {
-                            Image(systemName: "minus.circle.fill")
-                                .foregroundColor(.orange)
-                            Text(item.nameThree)
+                            Text(task.name!)
                         }
                     })
                     .padding(.top, 5)

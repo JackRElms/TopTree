@@ -10,16 +10,17 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: Item.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Item.creationDate, ascending: false)]) var items: FetchedResults<Item>
+    @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Task.creationDate, ascending: false)]) var tasks: FetchedResults<Task>
     @State private var showActionSheet = false
+    @State private var selection = 2
 
     var body: some View {
         VStack {
             
-            TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+            TabView(selection: $selection) {
                 NavigationView {
-                    List(items, id: \.self) { item in
-                        NavigationLink(destination: InsightView(item: item)) { Text(item.creationDate, style: .date) }
+                    List(tasks, id: \.self) { task in
+                        NavigationLink(destination: InsightView(task: task)) { Text(task.creationDate!, style: .date) }
                     }
                     .navigationBarTitle("Top Tree")
                     .navigationBarItems(trailing:
@@ -29,8 +30,9 @@ struct ContentView: View {
                             Image(systemName: "ellipsis.circle.fill").imageScale(.large)
                         }.actionSheet(isPresented: $showActionSheet, content: {
                             ActionSheet(title: Text("Action Sheet"), message: Text("Choose Option"), buttons: [
-                                .default(Text("Insert")) { try! Item.insertSamplesOneByOne(5)},
-                                .destructive(Text("Delete")) { try! Item.deleteAllOneByOne()}
+                                .default(Text("Insert 5")) { try! Task.insertSamplesOneByOne(5)},
+                                .default(Text("Insert 1")) { try! Task.createTask("Name", taskOrder: 1)},
+                                .destructive(Text("Delete")) { try! Task.deleteAllOneByOne()}
                             ])
                         })
                     )
