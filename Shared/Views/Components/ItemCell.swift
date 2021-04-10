@@ -32,7 +32,7 @@ struct ItemCell: View {
             }
             Spacer()
             Button(action: {
-                selectedItem = task.id!.uuidString
+                selectedItem = task.uuid!.uuidString
                 showingSheet.toggle()
             }) {
                 Image(systemName: "plus.circle.fill")

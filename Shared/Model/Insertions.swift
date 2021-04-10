@@ -23,7 +23,7 @@ extension Task {
                     task.lastModifiedDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate) ?? creationDate
                     task.creationDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate)
                     task.taskOrder = Int64(index)
-                    task.id = UUID()
+                    task.uuid = UUID()
                     print(task)
                 }
 
@@ -44,11 +44,10 @@ extension Task {
                 let task = Task(context: taskContext)
                 task.name = "taskName"
                 task.completed = true
-                task.id = UUID()
                 task.lastModifiedDate = creationDate
                 task.creationDate = creationDate
                 task.taskOrder = Int64(1)
-                let creation2Date = Date()
+                task.uuid = UUID()
                 try taskContext.save()
                 taskContext.reset()
                 print("### \(#function): Created task - \(task.name)")
