@@ -28,9 +28,9 @@ extension Task {
 
                 try taskContext.save()
                 taskContext.reset()
-                print("### \(#function): One by one inserted \(numberOfSamples) posts")
+                print("### \(#function): One by one inserted \(numberOfSamples) tasks")
             } catch {
-                print("### \(#function): Failed to insert articles in batch: \(error)")
+                print("### \(#function): Failed to insert tasks in batch: \(error)")
             }
         }
     }
@@ -51,25 +51,7 @@ extension Task {
                 taskContext.reset()
                 print("### \(#function): Created task - \(task.name)")
             } catch {
-                print("### \(#function): Failed to insert articles in batch: \(error)")
-            }
-        }
-    }
-    
-    static func deleteAllOneByOne() throws {
-        let taskContext = PersistentContainer.shared.newBackgroundContext()
-        taskContext.perform {
-            do {
-                let fetchRequest = self.fetchRequest()
-                let objects = try taskContext.fetch(fetchRequest) as! [NSManagedObject]
-                objects.forEach { object in
-                    taskContext.delete(object)
-                }
-                try taskContext.save()
-                taskContext.reset()
-                print("### \(#function): One by one deleted post count: \(objects.count)")
-            } catch {
-                print("### \(#function): Failed to delete existing records one by one: \(error)")
+                print("### \(#function): Failed to create Task: \(error)")
             }
         }
     }

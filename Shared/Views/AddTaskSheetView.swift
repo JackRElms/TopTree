@@ -23,7 +23,7 @@ struct AddTaskSheetView: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color(UIColor.secondarySystemBackground)))
                         .foregroundColor(.black)
                     Button(action: {
-//                        try! Task.createTask(selectedItem, taskOrder: 2)
+                        try! Task.updateTask(selectedTask)
                         presentationMode.wrappedValue.dismiss()
 
                     }) {
