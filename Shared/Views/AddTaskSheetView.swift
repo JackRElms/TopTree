@@ -23,9 +23,16 @@ struct AddTaskSheetView: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color(UIColor.secondarySystemBackground)))
                         .foregroundColor(.black)
                     Button(action: {
-                        try! Task.updateTask(selectedTask)
-                        presentationMode.wrappedValue.dismiss()
-
+                        if selectedTask.uuid == nil {
+                            try! Task.createTask(selectedTask.name, taskOrder: 2)
+                            presentationMode.wrappedValue.dismiss()
+                            return
+                        }
+                        if selectedTask.uuid != nil {
+                            try! Task.updateTask(selectedTask)
+                            presentationMode.wrappedValue.dismiss()
+                            return
+                        }
                     }) {
                         Image(systemName: "plus.circle.fill")
                             .font(.largeTitle)

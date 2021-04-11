@@ -29,4 +29,3 @@ final class Task: NSManagedObject, Identifiable {
     @NSManaged public var uuid: UUID?
 
 }
-
