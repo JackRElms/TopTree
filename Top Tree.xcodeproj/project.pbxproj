@@ -11,6 +11,7 @@
 		C11D5FC3261CF44A0093104A /* AddTaskSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D5FC2261CF44A0093104A /* AddTaskSheetView.swift */; };
 		C14D9CA526232781005A8E51 /* Deletions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14D9CA426232781005A8E51 /* Deletions.swift */; };
 		C14D9CA8262327B6005A8E51 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14D9CA7262327B6005A8E51 /* Updates.swift */; };
+		C14D9CAC26237463005A8E51 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14D9CAB26237463005A8E51 /* Date.swift */; };
 		C16B328A2618D6D80094E10F /* Top_Tree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C16B32742618D6D70094E10F /* Top_Tree.xcdatamodeld */; };
 		C16B328E2618D6D80094E10F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32772618D6D70094E10F /* ContentView.swift */; };
 		C16B32922618D6D80094E10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16B32792618D6D80094E10F /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		C11D5FC2261CF44A0093104A /* AddTaskSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskSheetView.swift; sourceTree = "<group>"; };
 		C14D9CA426232781005A8E51 /* Deletions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deletions.swift; sourceTree = "<group>"; };
 		C14D9CA7262327B6005A8E51 /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
+		C14D9CAB26237463005A8E51 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		C16B32752618D6D70094E10F /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		C16B32772618D6D70094E10F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C16B32792618D6D80094E10F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C14D9CAA26237457005A8E51 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C14D9CAB26237463005A8E51 /* Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C16B326E2618D6D70094E10F = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 		C16B32732618D6D70094E10F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C14D9CAA26237457005A8E51 /* Extensions */,
 				C16B32FD2619EEF70094E10F /* Views */,
 				C16B32A52618E4520094E10F /* Model */,
 				C16B32792618D6D80094E10F /* Assets.xcassets */,
@@ -261,6 +272,7 @@
 				C16B32A32618E4480094E10F /* Stack.swift in Sources */,
 				C16B32C22618EDB70094E10F /* PersistentHistoryCleaner.swift in Sources */,
 				C11D5FC3261CF44A0093104A /* AddTaskSheetView.swift in Sources */,
+				C14D9CAC26237463005A8E51 /* Date.swift in Sources */,
 				C16B32AF2618E7DD0094E10F /* Task.swift in Sources */,
 				C14D9CA526232781005A8E51 /* Deletions.swift in Sources */,
 				C16B32C32618EDB70094E10F /* PersistentHistoryMerger.swift in Sources */,

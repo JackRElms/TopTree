@@ -10,8 +10,8 @@ import SwiftUI
 struct TodayView: View {
 
     @State var showingSheet = false
-    @FetchRequest(fetchRequest: Task.fetchTodaysTasks()) var tasks: FetchedResults<Task>
     @State var selectedTask = Task()
+    @FetchRequest(fetchRequest: Task.fetchTodaysTasks()) var tasks: FetchedResults<Task>
 
     func renderCells(index: Int) -> ItemCell {
         for task in tasks
@@ -29,10 +29,17 @@ struct TodayView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
+                HStack {
+                    Text(Date().renderMediumDate())
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                        .font(.title3)
+                        .padding(.leading, 20)
+                    Spacer()
+                }
+                Divider()
                 VStack(alignment: .leading, spacing: nil, content: {
                     ForEach((1...3), id: \.self) {
                         renderCells(index: $0)
-                        Text("\($0)…")
                     }
                 }).padding(.top, 20)
             }
