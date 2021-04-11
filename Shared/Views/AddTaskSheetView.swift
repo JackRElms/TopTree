@@ -9,22 +9,23 @@ import SwiftUI
 
 struct AddTaskSheetView: View {
     
-    @FetchRequest var tasks: FetchedResults<Task>
-    @Binding var showingSheet: Bool
-    @Binding var selectedItem: String
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var selectedTask: Task
+    
 
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: nil, content: {
                 HStack {
-                    TextField("Enter task here", text: $selectedItem)
+                    TextField("Enter task here", text: $selectedTask.name)
                         .font(.body)
                         .padding(10)
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color(UIColor.secondarySystemBackground)))
                         .foregroundColor(.black)
                     Button(action: {
-                        try! Task.createTask(selectedItem, taskOrder: 2)
-                        showingSheet.toggle()
+//                        try! Task.createTask(selectedItem, taskOrder: 2)
+                        presentationMode.wrappedValue.dismiss()
+
                     }) {
                         Image(systemName: "plus.circle.fill")
                             .font(.largeTitle)
@@ -36,7 +37,7 @@ struct AddTaskSheetView: View {
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
             .navigationBarTitle(Text("Add a new task"))
                 .navigationBarItems(leading: Button(action: {
-                    showingSheet.toggle()
+                    presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Cancel")
                 })

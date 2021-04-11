@@ -37,7 +37,7 @@ struct MostProductiveCardView: View {
                         HStack {
                             Image(systemName: "checkmark.circle.fill")
                                 .foregroundColor(.green)
-                            Text(task.name!)
+                            Text(task.name)
                         }
                     })
                     .padding(.top, 5)

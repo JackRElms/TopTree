@@ -24,7 +24,6 @@ extension Task {
                     task.creationDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate)
                     task.taskOrder = Int64(index)
                     task.uuid = UUID()
-                    print(task)
                 }
 
                 try taskContext.save()

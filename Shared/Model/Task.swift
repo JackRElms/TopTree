@@ -24,7 +24,7 @@ final class Task: NSManagedObject, Identifiable {
     @NSManaged public var completed: Bool
     @NSManaged public var creationDate: Date?
     @NSManaged public var lastModifiedDate: Date?
-    @NSManaged public var name: String?
+    @NSManaged public var name: String
     @NSManaged public var taskOrder: Int64
     @NSManaged public var uuid: UUID?
 

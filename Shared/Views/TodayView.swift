@@ -10,8 +10,8 @@ import SwiftUI
 struct TodayView: View {
 
     @State var showingSheet = false
-    @State var selectedItem = ""
     @FetchRequest(fetchRequest: Task.fetchTodaysTasks()) var tasks: FetchedResults<Task>
+    @State var selectedTask = Task()
 
     
     var body: some View {
@@ -19,27 +19,15 @@ struct TodayView: View {
             ScrollView(.vertical) {
                 VStack(alignment: .leading, spacing: nil, content: {
                     ForEach(tasks, id: \.self) { task in
-                        ItemCell(task: task, showingSheet: $showingSheet, selectedItem: $selectedItem)
+                        ItemCell(task: task, showingSheet: $showingSheet, selectedTask: $selectedTask)
                     }
                     
                 }).padding(.top, 20)
             }
             .navigationBarTitle("Today")
         }.sheet(isPresented: $showingSheet, content: {
-            switch selectedItem {
-            case "nameOne":
-                AddTaskSheetView(tasks: FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "task.id = %@", selectedItem)), showingSheet: $showingSheet, selectedItem: $selectedItem)
-            default:
-                AddTaskSheetView(tasks: FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "task.id = %@", selectedItem)), showingSheet: $showingSheet, selectedItem: $selectedItem)
-            }
+            AddTaskSheetView(selectedTask: $selectedTask)
         })
     }
 }
 
-
-struct TodayView_Previews: PreviewProvider {
-    static var previews: some View {
-        TodayView()
-            .previewDevice("iPhone 11 Pro")
-    }
-}

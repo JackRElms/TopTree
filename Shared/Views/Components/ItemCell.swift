@@ -11,12 +11,12 @@ struct ItemCell: View {
     
     @State var task: Task
     @Binding var showingSheet: Bool
-    @Binding var selectedItem: String
+    @Binding var selectedTask: Task
     
     var body: some View {
         HStack(alignment: .center, spacing: nil, content: {
-            if task.name!.count > 0 {
-                Text(task.name!)
+            if task.name.count > 0 {
+                Text(task.name)
                     .font(.title2)
                     .bold()
                     .foregroundColor(Color(UIColor.secondaryLabel))
@@ -32,7 +32,7 @@ struct ItemCell: View {
             }
             Spacer()
             Button(action: {
-                selectedItem = task.uuid!.uuidString
+                selectedTask = task
                 showingSheet.toggle()
             }) {
                 Image(systemName: "plus.circle.fill")
