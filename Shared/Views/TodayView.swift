@@ -10,8 +10,8 @@ import SwiftUI
 struct TodayView: View {
 
     @State var showingSheet = false
-    @State var selectedTask: Item?
-    @FetchRequest(entity: Item.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Item.creationDate, ascending: false)]) var items: FetchedResults<Item>
+    @State var selectedTask: Task?
+    @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Task.creationDate, ascending: false)]) var items: FetchedResults<Task>
     
     init() {
         self.selectedTask = nil
@@ -22,7 +22,7 @@ struct TodayView: View {
         ScrollView(.vertical) {
             VStack(alignment: .leading, spacing: nil, content: {
                 ForEach(items, id: \.self) { task in
-                    ItemCell(showingSheet: $showingSheet, task: task, selectedTask: Item())
+                    ItemCell(task: task, showingSheet: $showingSheet)
                         .environmentObject(item)
                         .onTapGesture {
                             self.selectedTask = task

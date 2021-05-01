@@ -10,7 +10,7 @@ import SwiftUI
 struct AddItemSheetView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @Binding var task: Item?
+    @Binding var task: Task?
     
     var body: some View {
         NavigationView {

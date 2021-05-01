@@ -18,12 +18,12 @@ extension Task {
                 (0..<numberOfSamples).forEach { index in
                     let task = Task(context: taskContext)
         
-                    item.name = "Walk the Dog \(index)"
-                    item.completed = true
-                    item.startMood = Mood.happy
-                    item.endMood = Mood.happy
-                    item.lastModifiedDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate) ?? creationDate
-                    item.creationDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate)
+                    task.name = "Walk the Dog \(index)"
+                    task.completed = true
+//                    task.startMood = Mood.happy
+//                    task.endMood = Mood.happy
+                    task.lastModifiedDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate) ?? creationDate
+                    task.creationDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate)
                 }
 
                 try taskContext.save()

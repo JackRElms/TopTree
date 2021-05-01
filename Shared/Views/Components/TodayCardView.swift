@@ -40,7 +40,7 @@ struct TodayCardView: View {
                     HStack {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundColor(.green)
-                        Text(item.name)
+                        Text(task.name)
                     }
                 })
                 .padding(.top, 5)

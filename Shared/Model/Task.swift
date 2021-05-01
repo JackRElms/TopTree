@@ -12,14 +12,14 @@ import CoreData
 
 final class Task: NSManagedObject, Identifiable {
 
-//    @objc enum Mood: Int64 {
-//        case unknown
-//        case happy
-//        case sad
-//        case angry
-//        case lonely
-//        case veryUnmotivated
-//    }
+    @objc enum Mood: Int64 {
+        case unknown
+        case happy
+        case sad
+        case angry
+        case lonely
+        case veryUnmotivated
+    }
     
     @NSManaged public var completed: Bool
     @NSManaged public var creationDate: Date?

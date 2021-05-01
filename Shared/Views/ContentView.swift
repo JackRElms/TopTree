@@ -28,8 +28,8 @@ struct ContentView: View {
                     Image(systemName: "ellipsis.circle.fill").imageScale(.large)
                 }.actionSheet(isPresented: $showActionSheet, content: {
                     ActionSheet(title: Text("Action Sheet"), message: Text("Choose Option"), buttons: [
-                        .default(Text("Insert")) { try! Item.insertSamplesOneByOne(5)},
-                        .destructive(Text("Delete")) { try! Item.deleteAllOneByOne()}
+                        .default(Text("Insert")) { try! Task.insertSamplesOneByOne(5)},
+                        .destructive(Text("Delete")) { try! Task.deleteAllOneByOne()}
                     ])
                 })
             )

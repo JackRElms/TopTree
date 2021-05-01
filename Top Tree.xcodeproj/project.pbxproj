@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C11A3EFD263DA83500D508F8 /* Deletions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11A3EFC263DA83500D508F8 /* Deletions.swift */; };
 		C11D5FC0261CE81F0093104A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D5FBF261CE81F0093104A /* ItemCell.swift */; };
 		C11D5FC3261CF44A0093104A /* AddItemSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D5FC2261CF44A0093104A /* AddItemSheetView.swift */; };
 		C1605A2F263D86D700C20537 /* Optionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1605A2E263D86D700C20537 /* Optionals.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C11A3EFC263DA83500D508F8 /* Deletions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deletions.swift; path = "../../../../Downloads/TopTree-main/Shared/Model/Deletions.swift"; sourceTree = "<group>"; };
 		C11D5FBF261CE81F0093104A /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		C11D5FC2261CF44A0093104A /* AddItemSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemSheetView.swift; sourceTree = "<group>"; };
 		C1605A2E263D86D700C20537 /* Optionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optionals.swift; sourceTree = "<group>"; };
@@ -141,9 +143,8 @@
 				C16B32A22618E4480094E10F /* Stack.swift */,
 				C16B32E32618F3F50094E10F /* FetchedResultsController.swift */,
 				C16B32CC2618EF2A0094E10F /* Insertions.swift */,
-				C14D9CA426232781005A8E51 /* Deletions.swift */,
-				C14D9CA7262327B6005A8E51 /* Updates.swift */,
 				C16B32B32618ED270094E10F /* Testing.swift */,
+				C11A3EFC263DA83500D508F8 /* Deletions.swift */,
 				C16B32A72618E50D0094E10F /* FetchRequests.swift */,
 				C16B32A82618E50D0094E10F /* Saving.swift */,
 			);
@@ -177,7 +178,7 @@
 				C16B32772618D6D70094E10F /* ContentView.swift */,
 				C16B32FF2619EF1C0094E10F /* InsightView.swift */,
 				C16B331C261B61470094E10F /* TodayView.swift */,
-				C11D5FC2261CF44A0093104A /* AddTaskSheetView.swift */,
+				C11D5FC2261CF44A0093104A /* AddItemSheetView.swift */,
 				C16B3314261A6EB90094E10F /* Components */,
 			);
 			path = Views;
@@ -268,17 +269,15 @@
 				C16B33002619EF1C0094E10F /* InsightView.swift in Sources */,
 				C16B32A32618E4480094E10F /* Stack.swift in Sources */,
 				C16B32C22618EDB70094E10F /* PersistentHistoryCleaner.swift in Sources */,
-				C11D5FC3261CF44A0093104A /* AddTaskSheetView.swift in Sources */,
-				C14D9CAC26237463005A8E51 /* Date.swift in Sources */,
+				C11D5FC3261CF44A0093104A /* AddItemSheetView.swift in Sources */,
 				C16B32AF2618E7DD0094E10F /* Task.swift in Sources */,
-				C14D9CA526232781005A8E51 /* Deletions.swift in Sources */,
 				C16B32C32618EDB70094E10F /* PersistentHistoryMerger.swift in Sources */,
+				C11A3EFD263DA83500D508F8 /* Deletions.swift in Sources */,
 				C16B32CD2618EF2A0094E10F /* Insertions.swift in Sources */,
 				C16B32AA2618E50D0094E10F /* Saving.swift in Sources */,
 				C16B3312261A6D6F0094E10F /* TodayCardView.swift in Sources */,
 				C16B328E2618D6D80094E10F /* ContentView.swift in Sources */,
 				C11D5FC0261CE81F0093104A /* ItemCell.swift in Sources */,
-				C14D9CA8262327B6005A8E51 /* Updates.swift in Sources */,
 				C16B32BF2618EDB70094E10F /* PersistentHistoryTracking.swift in Sources */,
 				C16B32C12618EDB70094E10F /* PersistentHistoryObserver.swift in Sources */,
 				C16B32B42618ED270094E10F /* Testing.swift in Sources */,
