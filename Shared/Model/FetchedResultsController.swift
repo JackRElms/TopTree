@@ -10,10 +10,10 @@ import CoreData
 
 extension NSFetchedResultsController {
 
-    @objc static func articlesFetchedResultsController() -> NSFetchedResultsController<Item> {
+    @objc static func articlesFetchedResultsController() -> NSFetchedResultsController<Task> {
         /// Presentation: rewrite this using 'Managed'.
-        let fetchRequest = Item.listAllFetchRequest()
+        let fetchRequest = Task.listAllFetchRequest()
 
-        return NSFetchedResultsController<Item>(fetchRequest: fetchRequest, managedObjectContext: PersistentContainer.shared.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        return NSFetchedResultsController<Task>(fetchRequest: fetchRequest, managedObjectContext: PersistentContainer.shared.viewContext, sectionNameKeyPath: nil, cacheName: nil)
     }
 }

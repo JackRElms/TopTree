@@ -16,7 +16,7 @@
 		C16B32A32618E4480094E10F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32A22618E4480094E10F /* Stack.swift */; };
 		C16B32A92618E50D0094E10F /* FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32A72618E50D0094E10F /* FetchRequests.swift */; };
 		C16B32AA2618E50D0094E10F /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32A82618E50D0094E10F /* Saving.swift */; };
-		C16B32AF2618E7DD0094E10F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32AD2618E7DD0094E10F /* Item.swift */; };
+		C16B32AF2618E7DD0094E10F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32AD2618E7DD0094E10F /* Task.swift */; };
 		C16B32B42618ED270094E10F /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32B32618ED270094E10F /* Testing.swift */; };
 		C16B32BF2618EDB70094E10F /* PersistentHistoryTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32BA2618EDB70094E10F /* PersistentHistoryTracking.swift */; };
 		C16B32C02618EDB70094E10F /* PersistentHistoryFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32BB2618EDB70094E10F /* PersistentHistoryFetcher.swift */; };
@@ -48,7 +48,7 @@
 		C16B32A22618E4480094E10F /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		C16B32A72618E50D0094E10F /* FetchRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchRequests.swift; sourceTree = "<group>"; };
 		C16B32A82618E50D0094E10F /* Saving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
-		C16B32AD2618E7DD0094E10F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		C16B32AD2618E7DD0094E10F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C16B32B32618ED270094E10F /* Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		C16B32BA2618EDB70094E10F /* PersistentHistoryTracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHistoryTracking.swift; sourceTree = "<group>"; };
 		C16B32BB2618EDB70094E10F /* PersistentHistoryFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHistoryFetcher.swift; sourceTree = "<group>"; };
@@ -136,11 +136,13 @@
 			isa = PBXGroup;
 			children = (
 				C16B32742618D6D70094E10F /* Top_Tree.xcdatamodeld */,
-				C16B32AD2618E7DD0094E10F /* Item.swift */,
+				C16B32AD2618E7DD0094E10F /* Task.swift */,
 				C16B32B92618EDAC0094E10F /* Persistent History  */,
 				C16B32A22618E4480094E10F /* Stack.swift */,
 				C16B32E32618F3F50094E10F /* FetchedResultsController.swift */,
 				C16B32CC2618EF2A0094E10F /* Insertions.swift */,
+				C14D9CA426232781005A8E51 /* Deletions.swift */,
+				C14D9CA7262327B6005A8E51 /* Updates.swift */,
 				C16B32B32618ED270094E10F /* Testing.swift */,
 				C16B32A72618E50D0094E10F /* FetchRequests.swift */,
 				C16B32A82618E50D0094E10F /* Saving.swift */,
@@ -175,7 +177,7 @@
 				C16B32772618D6D70094E10F /* ContentView.swift */,
 				C16B32FF2619EF1C0094E10F /* InsightView.swift */,
 				C16B331C261B61470094E10F /* TodayView.swift */,
-				C11D5FC2261CF44A0093104A /* AddItemSheetView.swift */,
+				C11D5FC2261CF44A0093104A /* AddTaskSheetView.swift */,
 				C16B3314261A6EB90094E10F /* Components */,
 			);
 			path = Views;
@@ -266,14 +268,17 @@
 				C16B33002619EF1C0094E10F /* InsightView.swift in Sources */,
 				C16B32A32618E4480094E10F /* Stack.swift in Sources */,
 				C16B32C22618EDB70094E10F /* PersistentHistoryCleaner.swift in Sources */,
-				C11D5FC3261CF44A0093104A /* AddItemSheetView.swift in Sources */,
-				C16B32AF2618E7DD0094E10F /* Item.swift in Sources */,
+				C11D5FC3261CF44A0093104A /* AddTaskSheetView.swift in Sources */,
+				C14D9CAC26237463005A8E51 /* Date.swift in Sources */,
+				C16B32AF2618E7DD0094E10F /* Task.swift in Sources */,
+				C14D9CA526232781005A8E51 /* Deletions.swift in Sources */,
 				C16B32C32618EDB70094E10F /* PersistentHistoryMerger.swift in Sources */,
 				C16B32CD2618EF2A0094E10F /* Insertions.swift in Sources */,
 				C16B32AA2618E50D0094E10F /* Saving.swift in Sources */,
 				C16B3312261A6D6F0094E10F /* TodayCardView.swift in Sources */,
 				C16B328E2618D6D80094E10F /* ContentView.swift in Sources */,
 				C11D5FC0261CE81F0093104A /* ItemCell.swift in Sources */,
+				C14D9CA8262327B6005A8E51 /* Updates.swift in Sources */,
 				C16B32BF2618EDB70094E10F /* PersistentHistoryTracking.swift in Sources */,
 				C16B32C12618EDB70094E10F /* PersistentHistoryObserver.swift in Sources */,
 				C16B32B42618ED270094E10F /* Testing.swift in Sources */,

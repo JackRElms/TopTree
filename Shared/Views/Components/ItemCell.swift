@@ -9,9 +9,8 @@ import SwiftUI
 
 struct ItemCell: View {
     
+    @State var task: Task
     @Binding var showingSheet: Bool
-    @State var task: Item
-    @State var selectedTask: Item?
     
     var body: some View {
         HStack(alignment: .center, spacing: nil, content: {

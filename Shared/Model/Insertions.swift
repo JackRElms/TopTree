@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-extension Item {
+extension Task {
     static func insertSamplesOneByOne(_ numberOfSamples: Int) throws {
         let taskContext = PersistentContainer.shared.newBackgroundContext()
         taskContext.perform {
@@ -16,7 +16,7 @@ extension Item {
                 let creationDate = Date()
 
                 (0..<numberOfSamples).forEach { index in
-                    let item = Item(context: taskContext)
+                    let task = Task(context: taskContext)
         
                     item.name = "Walk the Dog \(index)"
                     item.completed = true
@@ -28,27 +28,30 @@ extension Item {
 
                 try taskContext.save()
                 taskContext.reset()
-                print("### \(#function): One by one inserted \(numberOfSamples) posts")
+                print("### \(#function): One by one inserted \(numberOfSamples) tasks")
             } catch {
-                print("### \(#function): Failed to insert articles in batch: \(error)")
+                print("### \(#function): Failed to insert tasks in batch: \(error)")
             }
         }
     }
     
-    static func deleteAllOneByOne() throws {
+    static func createTask(_ taskName: String, taskOrder: Int) throws {
         let taskContext = PersistentContainer.shared.newBackgroundContext()
         taskContext.perform {
             do {
-                let fetchRequest = self.fetchRequest()
-                let objects = try taskContext.fetch(fetchRequest) as! [NSManagedObject]
-                objects.forEach { object in
-                    taskContext.delete(object)
-                }
+                let creationDate = Date()
+                let task = Task(context: taskContext)
+                task.name = "taskName"
+                task.completed = true
+                task.lastModifiedDate = creationDate
+                task.creationDate = creationDate
+                task.taskOrder = Int64(1)
+                task.uuid = UUID()
                 try taskContext.save()
                 taskContext.reset()
-                print("### \(#function): One by one deleted post count: \(objects.count)")
+                print("### \(#function): Created task - \(task.name)")
             } catch {
-                print("### \(#function): Failed to delete existing records one by one: \(error)")
+                print("### \(#function): Failed to create Task: \(error)")
             }
         }
     }

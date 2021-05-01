@@ -11,7 +11,7 @@ import SwiftUI
 
 struct TotalCardView: View {
     
-    var item: Item
+    var task: Task
     
     var body: some View {
         ZStack(alignment: .topLeading, content: {

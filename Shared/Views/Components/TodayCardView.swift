@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TodayCardView: View {
     
-    var item: Item
+    var task: Task
     
     var body: some View {
         ZStack(alignment: .topLeading, content: {
