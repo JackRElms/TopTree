@@ -10,36 +10,35 @@ import SwiftUI
 struct TodayView: View {
 
     @State var showingSheet = false
-    @StateObject var item = ItemInstance()
+    @State var selectedTask: Item?
+    @FetchRequest(entity: Item.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Item.creationDate, ascending: false)]) var items: FetchedResults<Item>
+    
+    init() {
+        self.selectedTask = nil
+    }
     
     var body: some View {
-        NavigationView {
-            ScrollView(.vertical) {
-                VStack(alignment: .leading, spacing: nil, content: {
-                    ItemCell(showingSheet: $showingSheet, task: $item.nameOne)
-                    ItemCell(showingSheet: $showingSheet, task: $item.nameTwo)
-                    ItemCell(showingSheet: $showingSheet, task: $item.nameThree)
-                })
-            }
-            .navigationBarTitle("Today")
-        }.sheet(isPresented: $showingSheet, content: {
-            AddItemSheetView()
-                .environmentObject(item)
+        let item = ItemInstance()
+        ScrollView(.vertical) {
+            VStack(alignment: .leading, spacing: nil, content: {
+                ForEach(items, id: \.self) { task in
+                    ItemCell(showingSheet: $showingSheet, task: task, selectedTask: Item())
+                        .environmentObject(item)
+                        .onTapGesture {
+                            self.selectedTask = task
+                            self.showingSheet = true
+                        }
+                }
+            })
+        }
+        .sheet(isPresented: $showingSheet, content: {
+            AddItemSheetView(task: self.$selectedTask)
         })
     }
 }
 
 
 class ItemInstance: ObservableObject {
-    @Published var nameOne = ""
-    @Published var nameTwo = ""
-    @Published var nameThree = ""
-}
-
-
-struct TodayView_Previews: PreviewProvider {
-    static var previews: some View {
-        TodayView()
-            .previewDevice("iPhone 11 Pro")
-    }
+    @Published var name = ""
+    @Published var completed = false
 }

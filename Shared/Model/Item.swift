@@ -23,13 +23,8 @@ final class Item: NSManagedObject, Identifiable {
 
     @NSManaged public var creationDate: Date!
     @NSManaged public var lastModifiedDate: Date
-    @NSManaged public var nameOne: String
-    @NSManaged public var nameTwo: String
-    @NSManaged public var nameThree: String
-    @NSManaged public var completedOne: Bool
-    @NSManaged public var completedTwo: Bool
-    @NSManaged public var completedThree: Bool
-    
+    @NSManaged public var name: String
+    @NSManaged public var completed: Bool
     @NSManaged public var startMood: Mood
     @NSManaged public var endMood: Mood
 

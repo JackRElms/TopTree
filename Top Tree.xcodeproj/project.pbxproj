@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C11D5FC0261CE81F0093104A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D5FBF261CE81F0093104A /* ItemCell.swift */; };
 		C11D5FC3261CF44A0093104A /* AddItemSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D5FC2261CF44A0093104A /* AddItemSheetView.swift */; };
+		C1605A2F263D86D700C20537 /* Optionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1605A2E263D86D700C20537 /* Optionals.swift */; };
 		C16B328A2618D6D80094E10F /* Top_Tree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C16B32742618D6D70094E10F /* Top_Tree.xcdatamodeld */; };
 		C16B328E2618D6D80094E10F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B32772618D6D70094E10F /* ContentView.swift */; };
 		C16B32922618D6D80094E10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16B32792618D6D80094E10F /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		C11D5FBF261CE81F0093104A /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		C11D5FC2261CF44A0093104A /* AddItemSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemSheetView.swift; sourceTree = "<group>"; };
+		C1605A2E263D86D700C20537 /* Optionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optionals.swift; sourceTree = "<group>"; };
 		C16B32752618D6D70094E10F /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		C16B32772618D6D70094E10F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C16B32792618D6D80094E10F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1605A2D263D86C800C20537 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C1605A2E263D86D700C20537 /* Optionals.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		C16B326E2618D6D70094E10F = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 		C16B32732618D6D70094E10F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C1605A2D263D86C800C20537 /* Utils */,
 				C16B32FD2619EEF70094E10F /* Views */,
 				C16B32A52618E4520094E10F /* Model */,
 				C16B32792618D6D80094E10F /* Assets.xcassets */,
@@ -249,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1605A2F263D86D700C20537 /* Optionals.swift in Sources */,
 				C16B328A2618D6D80094E10F /* Top_Tree.xcdatamodeld in Sources */,
 				C16B32E42618F3F50094E10F /* FetchedResultsController.swift in Sources */,
 				C16B33002619EF1C0094E10F /* InsightView.swift in Sources */,

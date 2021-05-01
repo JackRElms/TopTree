@@ -40,17 +40,7 @@ struct TodayCardView: View {
                     HStack {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundColor(.green)
-                        Text(item.nameOne)
-                    }
-                    HStack {
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundColor(.green)
-                        Text(item.nameTwo)
-                    }
-                    HStack {
-                        Image(systemName: "minus.circle.fill")
-                            .foregroundColor(.orange)
-                        Text(item.nameThree)
+                        Text(item.name)
                     }
                 })
                 .padding(.top, 5)

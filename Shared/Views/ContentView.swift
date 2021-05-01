@@ -14,33 +14,28 @@ struct ContentView: View {
     @State private var showActionSheet = false
 
     var body: some View {
-        VStack {
-            
-            TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-                NavigationView {
-                    List(items, id: \.self) { item in
-                        NavigationLink(destination: InsightView(item: item)) { Text(item.creationDate, style: .date) }
-                    }
-                    .navigationBarTitle("Top Tree")
-                    .navigationBarItems(trailing:
-                        Button(action: {
-                            showActionSheet = true
-                        }) {
-                            Image(systemName: "ellipsis.circle.fill").imageScale(.large)
-                        }.actionSheet(isPresented: $showActionSheet, content: {
-                            ActionSheet(title: Text("Action Sheet"), message: Text("Choose Option"), buttons: [
-                                .default(Text("Insert")) { try! Item.insertSamplesOneByOne(5)},
-                                .destructive(Text("Delete")) { try! Item.deleteAllOneByOne()}
-                            ])
-                        })
-                    )
-                    
-                }.tabItem { Text("Top Tree") }.tag(1)
-                TodayView().tabItem { Text("Insights") }.tag(2)
+        NavigationView {
+            List{
+                NavigationLink(destination: TodayView()) { Label("Today", systemImage: "calendar.circle.fill") }
             }
+            .listStyle(SidebarListStyle())
+            .navigationBarTitle("Top Tree")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    showActionSheet = true
+                }) {
+                    Image(systemName: "ellipsis.circle.fill").imageScale(.large)
+                }.actionSheet(isPresented: $showActionSheet, content: {
+                    ActionSheet(title: Text("Action Sheet"), message: Text("Choose Option"), buttons: [
+                        .default(Text("Insert")) { try! Item.insertSamplesOneByOne(5)},
+                        .destructive(Text("Delete")) { try! Item.deleteAllOneByOne()}
+                    ])
+                })
+            )
         }
     }
 }
+
 
 private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()

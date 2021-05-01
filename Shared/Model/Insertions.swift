@@ -18,12 +18,8 @@ extension Item {
                 (0..<numberOfSamples).forEach { index in
                     let item = Item(context: taskContext)
         
-                    item.nameOne = "Walk the Dog"
-                    item.nameTwo = "Clean the Kitchen"
-                    item.nameThree = "Make the Bed"
-                    item.completedOne = true
-                    item.completedTwo = true
-                    item.completedThree = false
+                    item.name = "Walk the Dog \(index)"
+                    item.completed = true
                     item.startMood = Mood.happy
                     item.endMood = Mood.happy
                     item.lastModifiedDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate) ?? creationDate
