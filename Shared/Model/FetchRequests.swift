@@ -29,16 +29,17 @@ extension Task {
     }
     
     static func fetchTodaysTasks() -> NSFetchRequest<Task> {
-        let request: NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
         
-        request.sortDescriptors = [NSSortDescriptor(key: "taskOrder", ascending: true)]
+        let request: NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
+        let fiveDaysAgo = Calendar.current.date(byAdding: .day, value: -1, to: Date())
+        request.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
+        request.predicate = NSPredicate(format: "creationDate > %@", fiveDaysAgo! as CVarArg)
           
         return request
     }
     
     static func fetchTask(id: UUID) -> NSFetchRequest<Task> {
         let request: NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
-        
         request.sortDescriptors = [NSSortDescriptor(key: "taskOrder", ascending: true)]
         request.fetchLimit = 1
         request.predicate = NSPredicate(format: "id == %@", id as UUID as CVarArg)

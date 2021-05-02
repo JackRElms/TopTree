@@ -10,7 +10,6 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Task.creationDate, ascending: false)]) var tasks: FetchedResults<Task>
     @State private var showActionSheet = false
     @State private var selection = 2
 
@@ -27,9 +26,9 @@ struct ContentView: View {
                 }) {
                     Image(systemName: "ellipsis.circle.fill").imageScale(.large)
                 }.actionSheet(isPresented: $showActionSheet, content: {
-                    ActionSheet(title: Text("Action Sheet"), message: Text("Choose Option"), buttons: [
-                        .default(Text("Insert")) { try! Task.insertSamplesOneByOne(5)},
-                        .destructive(Text("Delete")) { try! Task.deleteAllOneByOne()}
+                    ActionSheet(title: Text("Actions"), message: Text("Choose Option"), buttons: [
+                        .default(Text("Insert 5")) { try! Task.insertSamplesOneByOne(5)},
+                        .destructive(Text("Delete All")) { try! Task.deleteAllOneByOne()}
                     ])
                 })
             )
