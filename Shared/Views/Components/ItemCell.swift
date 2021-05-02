@@ -10,7 +10,6 @@ import SwiftUI
 struct ItemCell: View {
     
     @State var task: Task
-    @Binding var showingSheet: Bool
     
     var body: some View {
         HStack(alignment: .center, spacing: nil, content: {

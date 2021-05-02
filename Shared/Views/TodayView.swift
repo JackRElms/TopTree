@@ -11,6 +11,7 @@ struct TodayView: View {
 
     @State var showingSheet = false
     @State var selectedTask: Task?
+    @State var listId = UUID()
     @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Task.creationDate, ascending: false)]) var items: FetchedResults<Task>
     
     init() {
@@ -18,27 +19,19 @@ struct TodayView: View {
     }
     
     var body: some View {
-        let item = ItemInstance()
         ScrollView(.vertical) {
             VStack(alignment: .leading, spacing: nil, content: {
                 ForEach(items, id: \.self) { task in
-                    ItemCell(task: task, showingSheet: $showingSheet)
-                        .environmentObject(item)
+                    ItemCell(task: task)
                         .onTapGesture {
                             self.selectedTask = task
                             self.showingSheet = true
                         }
-                }
+                }.id(listId)
             })
         }
         .sheet(isPresented: $showingSheet, content: {
-            AddItemSheetView(task: self.$selectedTask)
+            AddItemSheetView(task: self.$selectedTask, listId: $listId)
         })
     }
-}
-
-
-class ItemInstance: ObservableObject {
-    @Published var name = ""
-    @Published var completed = false
 }

@@ -11,6 +11,7 @@ struct AddItemSheetView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @Binding var task: Task?
+    @Binding var listId: UUID
     
     var body: some View {
         NavigationView {
@@ -28,6 +29,7 @@ struct AddItemSheetView: View {
                     .multilineTextAlignment(.center)
                 Spacer()
                 Button("Save") {
+                    self.listId = UUID()
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 .foregroundColor(.white)
