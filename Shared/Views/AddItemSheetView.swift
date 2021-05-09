@@ -61,8 +61,17 @@ struct AddItemSheetView: View {
             .navigationBarItems(leading:
             Button("Close") {
                 self.presentationMode.wrappedValue.dismiss()
+            }, trailing:
+            Button("Delete") {
+                if task != nil {
+                    do {
+                        try Task.deleteTask(taskId: (task?.uuid)!)
+                    } catch {
+                        print(error)
+                    }
+                }
+                self.presentationMode.wrappedValue.dismiss()
             })
-
         }
    }
 }

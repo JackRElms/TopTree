@@ -37,6 +37,7 @@ struct TodayView: View {
                         }
                 }
             })
+            .padding([.top])
         }
         .sheet(isPresented: $showingSheet, content: {
             AddItemSheetView(task: self.$selectedTask, listId: $listId)

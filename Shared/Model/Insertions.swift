@@ -24,6 +24,7 @@ extension Task {
 //                    task.endMood = Mood.happy
                     task.lastModifiedDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate) ?? creationDate
                     task.creationDate = Calendar.current.date(byAdding: .day, value: -index, to: creationDate)
+                    task.uuid = UUID()
                 }
 
                 try taskContext.save()
@@ -44,6 +45,7 @@ extension Task {
                 task.completed = false
                 task.lastModifiedDate = Date()
                 task.creationDate = Date()
+                task.uuid = UUID()
                 try taskContext.save()
                 taskContext.reset()
                 print("### \(#function): Created task - \(task.name)")
