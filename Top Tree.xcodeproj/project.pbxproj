@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C10F775226484D29006105F2 /* View Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10F775126484D29006105F2 /* View Extensions.swift */; };
+		C10F7754264853C0006105F2 /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10F7753264853C0006105F2 /* EmptyCell.swift */; };
 		C11A3EFD263DA83500D508F8 /* Deletions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11A3EFC263DA83500D508F8 /* Deletions.swift */; };
 		C11D5FC0261CE81F0093104A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D5FBF261CE81F0093104A /* ItemCell.swift */; };
 		C11D5FC3261CF44A0093104A /* AddItemSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D5FC2261CF44A0093104A /* AddItemSheetView.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C10F775126484D29006105F2 /* View Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View Extensions.swift"; sourceTree = "<group>"; };
+		C10F7753264853C0006105F2 /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
 		C11A3EFC263DA83500D508F8 /* Deletions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deletions.swift; path = "../../../../Downloads/TopTree-main/Shared/Model/Deletions.swift"; sourceTree = "<group>"; };
 		C11D5FBF261CE81F0093104A /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		C11D5FC2261CF44A0093104A /* AddItemSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemSheetView.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				C1605A2E263D86D700C20537 /* Optionals.swift */,
+				C10F775126484D29006105F2 /* View Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			children = (
 				C16B3311261A6D6F0094E10F /* TodayCardView.swift */,
 				C11D5FBF261CE81F0093104A /* ItemCell.swift */,
+				C10F7753264853C0006105F2 /* EmptyCell.swift */,
 				C16B3316261A6F060094E10F /* TotalCardView.swift */,
 				C16B3319261B42620094E10F /* MostProductiveCardView.swift */,
 			);
@@ -263,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C10F775226484D29006105F2 /* View Extensions.swift in Sources */,
 				C1605A2F263D86D700C20537 /* Optionals.swift in Sources */,
 				C16B328A2618D6D80094E10F /* Top_Tree.xcdatamodeld in Sources */,
 				C16B32E42618F3F50094E10F /* FetchedResultsController.swift in Sources */,
@@ -281,6 +288,7 @@
 				C16B32BF2618EDB70094E10F /* PersistentHistoryTracking.swift in Sources */,
 				C16B32C12618EDB70094E10F /* PersistentHistoryObserver.swift in Sources */,
 				C16B32B42618ED270094E10F /* Testing.swift in Sources */,
+				C10F7754264853C0006105F2 /* EmptyCell.swift in Sources */,
 				C16B32A92618E50D0094E10F /* FetchRequests.swift in Sources */,
 				C16B32C02618EDB70094E10F /* PersistentHistoryFetcher.swift in Sources */,
 				C16B32F62619E87E0094E10F /* Top_TreeApp.swift in Sources */,

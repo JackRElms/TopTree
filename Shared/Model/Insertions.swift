@@ -35,18 +35,15 @@ extension Task {
         }
     }
     
-    static func createTask(_ taskName: String, taskOrder: Int) throws {
+    static func createTask(_ taskName: String) throws {
         let taskContext = PersistentContainer.shared.newBackgroundContext()
         taskContext.perform {
             do {
-                let creationDate = Date()
                 let task = Task(context: taskContext)
-                task.name = "taskName"
-                task.completed = true
-                task.lastModifiedDate = creationDate
-                task.creationDate = creationDate
-                task.taskOrder = Int64(1)
-                task.uuid = UUID()
+                task.name = taskName
+                task.completed = false
+                task.lastModifiedDate = Date()
+                task.creationDate = Date()
                 try taskContext.save()
                 taskContext.reset()
                 print("### \(#function): Created task - \(task.name)")

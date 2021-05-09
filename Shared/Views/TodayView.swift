@@ -13,11 +13,12 @@ struct TodayView: View {
     @State var selectedTask: Task?
     @State var listId = UUID()
     @FetchRequest(fetchRequest: Task.fetchTodaysTasks()) var todaysTasks: FetchedResults<Task>
-    
+
     init() {
         self.selectedTask = nil
     }
-    
+        
+    @ViewBuilder
     var body: some View {
         ScrollView(.vertical) {
             VStack(alignment: .leading, spacing: nil, content: {
@@ -28,6 +29,13 @@ struct TodayView: View {
                             self.showingSheet = true
                         }
                 }.id(listId)
+                if todaysTasks.count < 3 {
+                    EmptyCell()
+                        .onTapGesture {
+                            self.selectedTask = nil
+                            self.showingSheet = true
+                        }
+                }
             })
         }
         .sheet(isPresented: $showingSheet, content: {
