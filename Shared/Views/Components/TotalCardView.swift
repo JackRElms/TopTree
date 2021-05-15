@@ -10,40 +10,46 @@ import SwiftUI
 
 
 struct TotalCardView: View {
-    
-    var task: Task
-    
+        
     var body: some View {
         ZStack(alignment: .topLeading, content: {
             RoundedRectangle(cornerRadius: 10, style: .circular)
                 .fill(Color(UIColor.tertiarySystemFill))
-                .frame(height: 210)
-            VStack(alignment: .leading, spacing: 5, content: {
+                .frame(minHeight: 135)
+            HStack(alignment: .top, spacing: 5, content: {
+                Image(systemName: "arrow.up.circle.fill")
+                    .font(.system(size: 50))
+                    .foregroundColor(.green)
                 VStack(alignment: .leading, spacing: nil, content: {
-                    HStack(content: {
-                        Image(systemName: "arrow.up.circle.fill")
-                            .font(.title)
-                            .foregroundColor(.green)
-                        
-                        Text("Total")
-                            .font(.title)
-                            .bold()
-                            .foregroundColor(Color(UIColor.label))
-                    }).padding(.bottom, 2)
-                    Text("You've completed 64 tasks this month. That's 6 more than before!")
-                        .font(.body)
-                        .foregroundColor(Color(UIColor.secondaryLabel))
+                    Text("Total")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color(UIColor.label))
+                        .padding(.bottom, -6.0)
                     HStack(content: {
                         Text("64")
-                            .font(.title)
-                            .foregroundColor(Color(UIColor.label))
-                        Text("Tasks completed")
-                            .font(.title)
-                            .foregroundColor(Color(UIColor.secondaryLabel))
-                    }).padding([.top, .bottom])
+                            .foregroundColor(.green) +
+                        Text(" Tasks completed")
+                            .foregroundColor(.green)
+                    })
+                    .padding(.bottom, -3.0)
+                    .font(.headline)
+                    Text("You've completed ")
+                        .foregroundColor(Color(UIColor.secondaryLabel)) +
+                        Text("64 tasks this month. ")
+                        .foregroundColor(Color(UIColor.secondaryLabel)) +
+                    Text("That's 6 more than before!")
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                        .fontWeight(.medium)
                 })
             })
             .padding()
         })
+    }
+}
+
+struct TotalCardView_Previews: PreviewProvider {
+    static var previews: some View {
+        TotalCardView()
     }
 }

@@ -38,6 +38,7 @@ struct TodayView: View {
                 }
             })
             .padding([.top])
+            .navigationBarTitle("Today")
         }
         .sheet(isPresented: $showingSheet, content: {
             AddItemSheetView(task: self.$selectedTask, listId: $listId)

@@ -16,7 +16,7 @@ struct ItemCell: View {
             Text(task.name)
                 .font(.title)
                 .bold()
-                .foregroundColor(Color(UIColor.secondaryLabel))
+                .foregroundColor(Color(UIColor.label))
                 .padding()
                 .truncationMode(.tail)
             Spacer()

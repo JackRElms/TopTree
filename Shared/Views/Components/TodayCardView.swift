@@ -10,8 +10,8 @@ import SwiftUI
 
 struct TodayCardView: View {
     
-    var task: Task
-    
+    @FetchRequest(fetchRequest: Task.fetchTodaysTasks()) var todaysTasks: FetchedResults<Task>
+        
     var body: some View {
         ZStack(alignment: .topLeading, content: {
             RoundedRectangle(cornerRadius: 10, style: .circular)
@@ -37,10 +37,12 @@ struct TodayCardView: View {
                         .foregroundColor(Color(UIColor.secondaryLabel))
                 })
                 VStack(alignment: .leading, spacing: 6, content: {
-                    HStack {
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundColor(.green)
-                        Text(task.name)
+                    ForEach(todaysTasks, id: \.self) { task in
+                        HStack {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundColor(.green)
+                            Text(task.name)
+                        }
                     }
                 })
                 .padding(.top, 5)
