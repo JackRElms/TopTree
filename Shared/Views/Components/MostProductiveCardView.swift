@@ -18,32 +18,31 @@ struct MostProductiveCardView: View {
         ZStack(alignment: .topLeading, content: {
             RoundedRectangle(cornerRadius: 10, style: .circular)
                 .fill(Color(UIColor.tertiarySystemFill))
-                .frame(height: 200)
-            VStack(alignment: .leading, spacing: 5, content: {
+                .frame(minHeight: 135)
+            HStack(alignment: .top, spacing: 5, content: {
+                Image(systemName: "star.circle.fill")
+                    .padding(.trailing, 8.0)
+                    .font(.system(size: 40))
+                    .foregroundColor(.green)
                 VStack(alignment: .leading, spacing: nil, content: {
+                    Text("Most Productive")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color(UIColor.label))
+                        .padding(.bottom, -6.0)
                     HStack(content: {
-                        Image(systemName: "star.circle.fill")
-                            .font(.title)
+                        Text("Thursday")
                             .foregroundColor(.green)
-                        
-                        Text("Most Productive")
-                            .font(.title)
-                            .bold()
-                            .foregroundColor(Color(UIColor.label))
-                    }).padding(.bottom, 2)
-                    Text("You completed all 3 tasks on Thursday. Good job!")
-                        .font(.body)
-                        .foregroundColor(Color(UIColor.secondaryLabel))
-                    VStack(alignment: .leading, spacing: 6, content: {
-                        ForEach(todaysTasks, id: \.self) { task in
-                            HStack {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .foregroundColor(.green)
-                                Text(task.name)
-                            }
-                        }
                     })
-                    .padding(.top, 5)
+                    .padding(.bottom, -3.0)
+                    .font(.headline)
+                    Text("You completed all your tasks on ")
+                        .foregroundColor(Color(UIColor.secondaryLabel)) +
+                        Text("Thursday.")
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                        .fontWeight(.medium) +
+                    Text("Great job!")
+                        .foregroundColor(Color(UIColor.secondaryLabel))
                 })
             })
             .padding()

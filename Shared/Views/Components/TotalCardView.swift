@@ -18,11 +18,12 @@ struct TotalCardView: View {
                 .frame(minHeight: 135)
             HStack(alignment: .top, spacing: 5, content: {
                 Image(systemName: "arrow.up.circle.fill")
-                    .font(.system(size: 50))
+                    .padding(.trailing, 8.0)
+                    .font(.system(size: 40))
                     .foregroundColor(.green)
                 VStack(alignment: .leading, spacing: nil, content: {
                     Text("Total")
-                        .font(.title)
+                        .font(.title2)
                         .fontWeight(.semibold)
                         .foregroundColor(Color(UIColor.label))
                         .padding(.bottom, -6.0)

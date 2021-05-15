@@ -16,38 +16,41 @@ struct TodayCardView: View {
         ZStack(alignment: .topLeading, content: {
             RoundedRectangle(cornerRadius: 10, style: .circular)
                 .fill(Color(UIColor.tertiarySystemFill))
-                .frame(height: 210)
-            VStack(alignment: .leading, spacing: 5, content: {
+                .frame(minHeight: 135)
+            HStack(alignment: .top, spacing: 5, content: {
+                Image(systemName: "calendar.circle.fill")
+                    .padding(.trailing, 8.0)
+                    .font(.system(size: 40))
+                    .foregroundColor(.green)
                 VStack(alignment: .leading, spacing: nil, content: {
+                    Text("Today")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color(UIColor.label))
+                        .padding(.bottom, -6.0)
                     HStack(content: {
-                        Image(systemName: "calendar.circle.fill")
-                            .font(.title)
+                        Text("2")
+                            .foregroundColor(.green) +
+                        Text(" Tasks completed")
                             .foregroundColor(.green)
-                        
-                        Text("Today")
-                            .font(.title)
-                            .bold()
-                            .foregroundColor(Color(UIColor.label))
-                    }).padding(.bottom, 2)
-                    Text("2 Completed")
-                        .font(.body)
+                    })
+                    .padding(.bottom, -3.0)
+                    .font(.headline)
+                    Text("Almost there, you only have ")
+                        .foregroundColor(Color(UIColor.secondaryLabel)) +
+                    Text("1 task left.")
                         .foregroundColor(Color(UIColor.secondaryLabel))
-                    Text("Almost there, you only have 1 task left")
-                        .font(.body)
-                        .foregroundColor(Color(UIColor.secondaryLabel))
+                        .fontWeight(.medium)
                 })
-                VStack(alignment: .leading, spacing: 6, content: {
-                    ForEach(todaysTasks, id: \.self) { task in
-                        HStack {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.green)
-                            Text(task.name)
-                        }
-                    }
-                })
-                .padding(.top, 5)
             })
             .padding()
         })
+    }
+}
+
+
+struct TodayCardView_Previews: PreviewProvider {
+    static var previews: some View {
+        TodayCardView()
     }
 }
