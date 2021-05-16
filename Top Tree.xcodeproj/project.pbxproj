@@ -34,6 +34,7 @@
 		C16B3317261A6F060094E10F /* TotalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B3316261A6F060094E10F /* TotalCardView.swift */; };
 		C16B331A261B42620094E10F /* MostProductiveCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B3319261B42620094E10F /* MostProductiveCardView.swift */; };
 		C16B331D261B61470094E10F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B331C261B61470094E10F /* TodayView.swift */; };
+		C1C868E72650425800967EBE /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C868E62650425800967EBE /* Today.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		C16B3316261A6F060094E10F /* TotalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCardView.swift; sourceTree = "<group>"; };
 		C16B3319261B42620094E10F /* MostProductiveCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostProductiveCardView.swift; sourceTree = "<group>"; };
 		C16B331C261B61470094E10F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		C1C868E62650425800967EBE /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		C16B32732618D6D70094E10F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C1C868E52650421D00967EBE /* Function */,
 				C1605A2D263D86C800C20537 /* Utils */,
 				C16B32FD2619EEF70094E10F /* Views */,
 				C16B32A52618E4520094E10F /* Model */,
@@ -201,6 +204,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		C1C868E52650421D00967EBE /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				C1C868E62650425800967EBE /* Today.swift */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,6 +284,7 @@
 				C1605A2F263D86D700C20537 /* Optionals.swift in Sources */,
 				C16B328A2618D6D80094E10F /* Top_Tree.xcdatamodeld in Sources */,
 				C16B32E42618F3F50094E10F /* FetchedResultsController.swift in Sources */,
+				C1C868E72650425800967EBE /* Today.swift in Sources */,
 				C16B33002619EF1C0094E10F /* InsightView.swift in Sources */,
 				C16B32A32618E4480094E10F /* Stack.swift in Sources */,
 				C16B32C22618EDB70094E10F /* PersistentHistoryCleaner.swift in Sources */,

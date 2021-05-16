@@ -37,8 +37,8 @@ struct TotalCardView: View {
                     .font(.headline)
                     Text("You've completed ")
                         .foregroundColor(Color(UIColor.secondaryLabel)) +
-                        Text("64 tasks this month. ")
-                        .foregroundColor(Color(UIColor.secondaryLabel)) +
+                    Text("64 tasks this month. ")
+                    .foregroundColor(Color(UIColor.secondaryLabel)) +
                     Text("That's 6 more than before!")
                         .foregroundColor(Color(UIColor.secondaryLabel))
                         .fontWeight(.medium)

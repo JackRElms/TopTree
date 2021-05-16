@@ -10,7 +10,12 @@ import SwiftUI
 
 struct TodayCardView: View {
     
-    @FetchRequest(fetchRequest: Task.fetchTodaysTasks()) var todaysTasks: FetchedResults<Task>
+    var processedTasks: TodayInsight
+    let insight = Insight()
+    
+    init() {
+        processedTasks = insight.processTodaysTasks()
+    }
         
     var body: some View {
         ZStack(alignment: .topLeading, content: {
@@ -28,19 +33,40 @@ struct TodayCardView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(Color(UIColor.label))
                         .padding(.bottom, -6.0)
+                    
                     HStack(content: {
-                        Text("2")
-                            .foregroundColor(.green) +
-                        Text(" Tasks completed")
+                        Text(String(processedTasks.numberOfCompletedTasks))
                             .foregroundColor(.green)
+                        if processedTasks.numberOfCompletedTasks == 1 {
+                            Text("Task completed")
+                                .foregroundColor(.green)
+                        } else {
+                            Text("Tasks completed")
+                                .foregroundColor(.green)
+                        }
                     })
                     .padding(.bottom, -3.0)
                     .font(.headline)
-                    Text("Almost there, you only have ")
-                        .foregroundColor(Color(UIColor.secondaryLabel)) +
-                    Text("1 task left.")
-                        .foregroundColor(Color(UIColor.secondaryLabel))
-                        .fontWeight(.medium)
+                    
+                    HStack {
+                        Text(processedTasks.remainingTodayMotivation)
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                        if processedTasks.numberOfUncompletedTasks > 0 {
+                            Text(String(processedTasks.numberOfUncompletedTasks))
+                                .foregroundColor(Color(UIColor.secondaryLabel))
+                                .fontWeight(.medium)
+                            switch processedTasks.numberOfUncompletedTasks {
+                            case 1:
+                                Text("Task left")
+                                    .foregroundColor(Color(UIColor.secondaryLabel))
+                                    .fontWeight(.medium)
+                            default:
+                                Text("Tasks left")
+                                    .foregroundColor(Color(UIColor.secondaryLabel))
+                                    .fontWeight(.medium)
+                            }
+                        }
+                    }
                 })
             })
             .padding()
